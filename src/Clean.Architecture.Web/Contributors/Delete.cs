@@ -5,14 +5,13 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Clean.Architecture.Web.Contributors;
 
-public class Delete
+public class Delete(IMediator mediator)
   : Endpoint<DeleteContributorRequest,
              Results<NoContent,
                      NotFound,
                      ProblemHttpResult>>
 {
-  private readonly IMediator _mediator;
-  public Delete(IMediator mediator) => _mediator = mediator;
+  private readonly IMediator _mediator = mediator;
 
   public override void Configure()
   {

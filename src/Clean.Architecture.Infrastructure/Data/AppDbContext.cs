@@ -10,7 +10,4 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     base.OnModelCreating(modelBuilder);
     modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
   }
-
-  public override int SaveChanges() =>
-        SaveChangesAsync().GetAwaiter().GetResult();
 }

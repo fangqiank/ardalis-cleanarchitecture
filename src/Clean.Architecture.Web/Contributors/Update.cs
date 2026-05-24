@@ -26,7 +26,7 @@ public class Update(IMediator mediator)
       s.Summary = "Update a contributor";
       s.Description = "Updates an existing contributor's information. The contributor name must be between 2 and 100 characters long.";
       s.ExampleRequest = new UpdateContributorRequest { Id = 1, Name = "Updated Name" };
-      s.ResponseExamples[200] = new UpdateContributorResponse(new ContributorRecord(1, "Updated Name", ""));
+      s.ResponseExamples[200] = new UpdateContributorResponse(new ContributorRecord(1, "Updated Name", "+1 555-1234567"));
 
       // Document possible responses
       s.Responses[200] = "Contributor updated successfully";
@@ -49,7 +49,7 @@ public class Update(IMediator mediator)
     ExecuteAsync(UpdateContributorRequest request, CancellationToken ct)
   {
     var cmd = new UpdateContributorCommand(
-      ContributorId.From(request.Id),
+      ContributorId.From(request.ContributorId),
       ContributorName.From(request.Name!));
 
     var result = await _mediator.Send(cmd, ct);
@@ -62,5 +62,5 @@ public sealed class UpdateContributorMapper
   : Mapper<UpdateContributorRequest, UpdateContributorResponse, ContributorDto>
 {
   public override UpdateContributorResponse FromEntity(ContributorDto e)
-    => new(new ContributorRecord(e.Id.Value, e.Name.Value, ""));
+    => new(new ContributorRecord(e.Id.Value, e.Name.Value, e.PhoneNumber.ToString()));
 }

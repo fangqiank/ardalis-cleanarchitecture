@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 950" width="1300" height="950">
+  <defs>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tealGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#42b883;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#35495e;stop-opacity:1" />
+    </linearGradient>
+
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a855f7"/>
+    </marker>
+    <marker id="arrowSky" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0ea5e9"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#42b883"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <style>
+    .flow-line-purple { stroke-dasharray: 8, 4; animation: dash-flow-purple 0.5s linear infinite; }
+    .flow-line-sky { stroke-dasharray: 8, 4; animation: dash-flow-sky 0.5s linear infinite; }
+    .flow-line-orange { stroke-dasharray: 8, 4; animation: dash-flow-orange 0.5s linear infinite; }
+    .flow-line-blue { stroke-dasharray: 8, 4; animation: dash-flow-blue 0.5s linear infinite; }
+    .flow-line-green { stroke-dasharray: 8, 4; animation: dash-flow-green 0.5s linear infinite; }
+    .flow-line-teal { stroke-dasharray: 8, 4; animation: dash-flow-teal 0.5s linear infinite; }
+    .flow-line-gray { stroke-dasharray: 8, 4; animation: dash-flow-gray 0.5s linear infinite; }
+    @keyframes dash-flow-purple { to { stroke-dashoffset: -12; } }
+    @keyframes dash-flow-sky { to { stroke-dashoffset: -12; } }
+    @keyframes dash-flow-orange { to { stroke-dashoffset: -12; } }
+    @keyframes dash-flow-blue { to { stroke-dashoffset: -12; } }
+    @keyframes dash-flow-green { to { stroke-dashoffset: -12; } }
+    @keyframes dash-flow-teal { to { stroke-dashoffset: -12; } }
+    @keyframes dash-flow-gray { to { stroke-dashoffset: -12; } }
+  </style>
+
+  <!-- White background -->
+  <rect width="1300" height="950" fill="#ffffff"/>
+
+  <!-- Grid -->
+  <g opacity="0.1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1300" height="950" fill="url(#grid)"/>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(650, 38)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#1e293b">Clean Architecture / 整洁架构</text>
+    <text x="0" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#64748b">Ardalis Clean Architecture Template — .NET 10 / FastEndpoints / CQRS / DDD</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LAYER LABELS (left side)                     -->
+  <!-- ============================================ -->
+  <g opacity="0.6">
+    <text x="22" y="170" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8" transform="rotate(-90, 22, 170)">EXTERNAL</text>
+    <text x="22" y="380" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8" transform="rotate(-90, 22, 380)">INTERFACE</text>
+    <text x="22" y="580" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8" transform="rotate(-90, 22, 580)">APPLICATION</text>
+    <text x="22" y="770" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8" transform="rotate(-90, 22, 770)">DOMAIN</text>
+  </g>
+
+  <!-- Layer separator lines -->
+  <line x1="40" y1="250" x2="1260" y2="250" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="40" y1="440" x2="1260" y2="440" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="40" y1="640" x2="1260" y2="640" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- ============================================ -->
+  <!-- ROW 1: EXTERNAL — Client + Aspire Host       -->
+  <!-- ============================================ -->
+
+  <!-- Client -->
+  <g transform="translate(60, 80)">
+    <rect x="0" y="0" width="220" height="130" rx="12" fill="#f1f5f9" stroke="#0ea5e9" stroke-width="2"/>
+    <rect x="0" y="0" width="220" height="35" rx="12" fill="url(#skyGradient)"/>
+    <rect x="0" y="20" width="220" height="15" fill="url(#skyGradient)"/>
+    <text x="110" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Client / 客户端</text>
+
+    <g transform="translate(15, 48)">
+      <rect x="0" y="0" width="87" height="30" rx="5" fill="#ffffff" stroke="#bae6fd" stroke-width="1"/>
+      <text x="43" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#0284c7">Scalar UI</text>
+    </g>
+    <g transform="translate(117, 48)">
+      <rect x="0" y="0" width="87" height="30" rx="5" fill="#ffffff" stroke="#bae6fd" stroke-width="1"/>
+      <text x="43" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#0284c7">Swagger</text>
+    </g>
+    <g transform="translate(15, 86)">
+      <rect x="0" y="0" width="87" height="30" rx="5" fill="#ffffff" stroke="#bae6fd" stroke-width="1"/>
+      <text x="43" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#0284c7">HTTP Client</text>
+    </g>
+    <g transform="translate(117, 86)">
+      <rect x="0" y="0" width="87" height="30" rx="5" fill="#ffffff" stroke="#bae6fd" stroke-width="1"/>
+      <text x="43" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#0284c7">curl / API</text>
+    </g>
+  </g>
+
+  <!-- Aspire Host -->
+  <g transform="translate(960, 80)">
+    <rect x="0" y="0" width="260" height="130" rx="12" fill="#f0fdf4" stroke="#42b883" stroke-width="2"/>
+    <rect x="0" y="0" width="260" height="35" rx="12" fill="url(#tealGradient)"/>
+    <rect x="0" y="20" width="260" height="15" fill="url(#tealGradient)"/>
+    <text x="130" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Aspire Host / 编排</text>
+
+    <g transform="translate(15, 48)">
+      <rect x="0" y="0" width="110" height="30" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="55" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#35495e">Service Discovery</text>
+    </g>
+    <g transform="translate(135, 48)">
+      <rect x="0" y="0" width="110" height="30" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="55" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#35495e">SQL Server</text>
+    </g>
+    <g transform="translate(15, 86)">
+      <rect x="0" y="0" width="110" height="30" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="55" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#35495e">Health Checks</text>
+    </g>
+    <g transform="translate(135, 86)">
+      <rect x="0" y="0" width="110" height="30" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="55" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#35495e">Dashboard</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- ROW 2: Web + ServiceDefaults                 -->
+  <!-- ============================================ -->
+
+  <!-- Web Project -->
+  <g transform="translate(60, 280)">
+    <rect x="0" y="0" width="720" height="140" rx="12" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+    <rect x="0" y="0" width="720" height="35" rx="12" fill="url(#purpleGradient)"/>
+    <rect x="0" y="20" width="720" height="15" fill="url(#purpleGradient)"/>
+    <text x="360" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Clean.Architecture.Web / API 接口层</text>
+
+    <!-- FastEndpoints row -->
+    <g transform="translate(15, 48)">
+      <rect x="0" y="0" width="108" height="36" rx="5" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="54" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#7c3aed">POST /Create</text>
+      <text x="54" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">REPR Pattern</text>
+    </g>
+    <g transform="translate(131, 48)">
+      <rect x="0" y="0" width="108" height="36" rx="5" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="54" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#7c3aed">GET /{id}</text>
+      <text x="54" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">GetById</text>
+    </g>
+    <g transform="translate(247, 48)">
+      <rect x="0" y="0" width="108" height="36" rx="5" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="54" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#7c3aed">GET /List</text>
+      <text x="54" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">Pagination</text>
+    </g>
+    <g transform="translate(363, 48)">
+      <rect x="0" y="0" width="108" height="36" rx="5" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="54" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#7c3aed">PUT /{id}</text>
+      <text x="54" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">Update</text>
+    </g>
+    <g transform="translate(479, 48)">
+      <rect x="0" y="0" width="108" height="36" rx="5" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="54" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#7c3aed">DELETE /{id}</text>
+      <text x="54" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">Remove</text>
+    </g>
+
+    <!-- Cross-cutting row -->
+    <g transform="translate(15, 94)">
+      <rect x="0" y="0" width="140" height="30" rx="5" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="70" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#7c3aed">FluentValidation</text>
+    </g>
+    <g transform="translate(165, 94)">
+      <rect x="0" y="0" width="140" height="30" rx="5" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="70" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#7c3aed">ResultExtensions</text>
+    </g>
+    <g transform="translate(315, 94)">
+      <rect x="0" y="0" width="140" height="30" rx="5" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="70" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#7c3aed">Serilog + Aspire</text>
+    </g>
+    <g transform="translate(465, 94)">
+      <rect x="0" y="0" width="140" height="30" rx="5" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="70" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#7c3aed">Scalar / OpenAPI</text>
+    </g>
+  </g>
+
+  <!-- ServiceDefaults -->
+  <g transform="translate(820, 280)">
+    <rect x="0" y="0" width="400" height="140" rx="12" fill="#f0fdf4" stroke="#42b883" stroke-width="2"/>
+    <rect x="0" y="0" width="400" height="35" rx="12" fill="url(#tealGradient)"/>
+    <rect x="0" y="20" width="400" height="15" fill="url(#tealGradient)"/>
+    <text x="200" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">ServiceDefaults / 服务默认配置</text>
+
+    <g transform="translate(15, 48)">
+      <rect x="0" y="0" width="115" height="36" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="57" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#35495e">OpenTelemetry</text>
+      <text x="57" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">Traces + Metrics</text>
+    </g>
+    <g transform="translate(140, 48)">
+      <rect x="0" y="0" width="115" height="36" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="57" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#35495e">Health Checks</text>
+      <text x="57" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">Startup + DB</text>
+    </g>
+    <g transform="translate(265, 48)">
+      <rect x="0" y="0" width="115" height="36" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="57" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#35495e">Service Discovery</text>
+      <text x="57" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">HTTP Resilience</text>
+    </g>
+    <g transform="translate(15, 94)">
+      <rect x="0" y="0" width="180" height="30" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="90" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#35495e">AddServiceDefaults() extension</text>
+    </g>
+    <g transform="translate(205, 94)">
+      <rect x="0" y="0" width="180" height="30" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="90" y="19" text-anchor="middle" font-family="monospace" font-size="9" fill="#35495e">MapDefaultEndpoints()</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- ROW 3: UseCases + Infrastructure             -->
+  <!-- ============================================ -->
+
+  <!-- UseCases -->
+  <g transform="translate(60, 470)">
+    <rect x="0" y="0" width="500" height="150" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+    <rect x="0" y="0" width="500" height="35" rx="12" fill="url(#orangeGradient)"/>
+    <rect x="0" y="20" width="500" height="15" fill="url(#orangeGradient)"/>
+    <text x="250" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Clean.Architecture.UseCases / 用例层 (CQRS)</text>
+
+    <!-- Commands -->
+    <g transform="translate(15, 48)">
+      <rect x="0" y="0" width="150" height="40" rx="5" fill="#ffffff" stroke="#fed7aa" stroke-width="1"/>
+      <text x="75" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#ea580c">Commands</text>
+      <text x="75" y="30" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">Create / Update / Delete</text>
+    </g>
+    <g transform="translate(175, 48)">
+      <rect x="0" y="0" width="150" height="40" rx="5" fill="#ffffff" stroke="#fed7aa" stroke-width="1"/>
+      <text x="75" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#ea580c">Queries</text>
+      <text x="75" y="30" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">GetById / List (Paged)</text>
+    </g>
+    <g transform="translate(335, 48)">
+      <rect x="0" y="0" width="150" height="40" rx="5" fill="#ffffff" stroke="#fed7aa" stroke-width="1"/>
+      <text x="75" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#ea580c">Handlers</text>
+      <text x="75" y="30" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">ICommandHandler / IQueryHandler</text>
+    </g>
+    <g transform="translate(15, 100)">
+      <rect x="0" y="0" width="150" height="36" rx="5" fill="#ffffff" stroke="#fed7aa" stroke-width="1"/>
+      <text x="75" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#ea580c">Mediator</text>
+      <text x="75" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">Source Generator (not MediatR)</text>
+    </g>
+    <g transform="translate(175, 100)">
+      <rect x="0" y="0" width="150" height="36" rx="5" fill="#ffffff" stroke="#fed7aa" stroke-width="1"/>
+      <text x="75" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#ea580c">Result&lt;T&gt;</text>
+      <text x="75" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">Ardalis.Result pattern</text>
+    </g>
+    <g transform="translate(335, 100)">
+      <rect x="0" y="0" width="150" height="36" rx="5" fill="#ffffff" stroke="#fed7aa" stroke-width="1"/>
+      <text x="75" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#ea580c">DTOs</text>
+      <text x="75" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">ContributorDto / PagedResult</text>
+    </g>
+  </g>
+
+  <!-- Infrastructure -->
+  <g transform="translate(600, 470)">
+    <rect x="0" y="0" width="620" height="150" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="0" y="0" width="620" height="35" rx="12" fill="url(#blueGradient)"/>
+    <rect x="0" y="20" width="620" height="15" fill="url(#blueGradient)"/>
+    <text x="310" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Clean.Architecture.Infrastructure / 基础设施层</text>
+
+    <g transform="translate(15, 48)">
+      <rect x="0" y="0" width="140" height="40" rx="5" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="70" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#2563eb">AppDbContext</text>
+      <text x="70" y="30" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">EF Core + Migrations</text>
+    </g>
+    <g transform="translate(165, 48)">
+      <rect x="0" y="0" width="140" height="40" rx="5" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="70" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#2563eb">EfRepository&lt;T&gt;</text>
+      <text x="70" y="30" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">Ardalis.Specification</text>
+    </g>
+    <g transform="translate(315, 48)">
+      <rect x="0" y="0" width="140" height="40" rx="5" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="70" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#2563eb">Query Services</text>
+      <text x="70" y="30" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">ListContributors</text>
+    </g>
+    <g transform="translate(465, 48)">
+      <rect x="0" y="0" width="140" height="40" rx="5" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="70" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#2563eb">Email Sender</text>
+      <text x="70" y="30" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">MimeKit / SMTP</text>
+    </g>
+    <g transform="translate(15, 100)">
+      <rect x="0" y="0" width="190" height="36" rx="5" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="95" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#2563eb">EventDispatchInterceptor</text>
+      <text x="95" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">SaveChanges + Domain Events</text>
+    </g>
+    <g transform="translate(215, 100)">
+      <rect x="0" y="0" width="190" height="36" rx="5" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="95" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#2563eb">Database Strategy</text>
+      <text x="95" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">SQL Server / SQLite / Aspire</text>
+    </g>
+    <g transform="translate(415, 100)">
+      <rect x="0" y="0" width="190" height="36" rx="5" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="95" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#2563eb">Seed Data</text>
+      <text x="95" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">27 Contributors + EnsureCreated</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- ROW 4: Core Domain                           -->
+  <!-- ============================================ -->
+
+  <g transform="translate(60, 665)">
+    <rect x="0" y="0" width="1160" height="130" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <rect x="0" y="0" width="1160" height="35" rx="12" fill="url(#greenGradient)"/>
+    <rect x="0" y="20" width="1160" height="15" fill="url(#greenGradient)"/>
+    <text x="580" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Clean.Architecture.Core / 领域核心层 (Zero Dependencies)</text>
+
+    <g transform="translate(15, 48)">
+      <rect x="0" y="0" width="150" height="36" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="75" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#16a34a">Contributor</text>
+      <text x="75" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">Entity + Aggregate Root</text>
+    </g>
+    <g transform="translate(175, 48)">
+      <rect x="0" y="0" width="150" height="36" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="75" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#16a34a">Vogen Value Objects</text>
+      <text x="75" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">ContributorId / Name</text>
+    </g>
+    <g transform="translate(335, 48)">
+      <rect x="0" y="0" width="150" height="36" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="75" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#16a34a">SmartEnum</text>
+      <text x="75" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">ContributorStatus</text>
+    </g>
+    <g transform="translate(495, 48)">
+      <rect x="0" y="0" width="150" height="36" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="75" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#16a34a">Specifications</text>
+      <text x="75" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">ContributorByIdSpec</text>
+    </g>
+    <g transform="translate(655, 48)">
+      <rect x="0" y="0" width="150" height="36" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="75" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#16a34a">Domain Events</text>
+      <text x="75" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">Deleted / NameUpdated</text>
+    </g>
+    <g transform="translate(815, 48)">
+      <rect x="0" y="0" width="150" height="36" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="75" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#16a34a">Interfaces</text>
+      <text x="75" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">IRepository / IEmailSender</text>
+    </g>
+    <g transform="translate(975, 48)">
+      <rect x="0" y="0" width="170" height="36" rx="5" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="85" y="14" text-anchor="middle" font-family="monospace" font-size="9" fill="#16a34a">Domain Services</text>
+      <text x="85" y="28" text-anchor="middle" font-family="Arial" font-size="8" fill="#94a3b8">DeleteContributorService</text>
+    </g>
+    <g transform="translate(15, 94)">
+      <rect x="0" y="0" width="300" height="24" rx="4" fill="#dcfce7" stroke="#86efac" stroke-width="1"/>
+      <text x="150" y="16" text-anchor="middle" font-family="Arial" font-size="9" fill="#16a34a">No external dependencies — Pure domain logic</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- FLOW LINES                                   -->
+  <!-- ============================================ -->
+
+  <!-- Client -> Web (HTTP Request) -->
+  <path d="M 280 145 L 400 145 L 400 280" stroke="#bae6fd" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 280 145 L 400 145 L 400 280" class="flow-line-sky" stroke="#0ea5e9" stroke-width="3" fill="none" marker-end="url(#arrowSky)" stroke-linecap="round"/>
+  <text x="345" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0ea5e9">HTTP / HTTPS</text>
+
+  <!-- Web -> UseCases (Mediator Send) -->
+  <path d="M 420 420 L 420 470" stroke="#ffedd5" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 420 420 L 420 470" class="flow-line-orange" stroke="#f97316" stroke-width="3" fill="none" marker-end="url(#arrowOrange)" stroke-linecap="round"/>
+  <text x="445" y="450" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#f97316">IMediator.Send()</text>
+
+  <!-- UseCases -> Core (depends on) -->
+  <path d="M 310 620 L 310 665" stroke="#dcfce7" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 310 620 L 310 665" class="flow-line-green" stroke="#22c55e" stroke-width="3" fill="none" marker-end="url(#arrowGreen)" stroke-linecap="round"/>
+  <text x="335" y="648" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#22c55e">Domain Entities / Specs</text>
+
+  <!-- Infrastructure -> Core (implements interfaces) -->
+  <path d="M 910 620 L 910 665" stroke="#dcfce7" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 910 620 L 910 665" class="flow-line-green" stroke="#22c55e" stroke-width="3" fill="none" marker-end="url(#arrowGreen)" stroke-linecap="round"/>
+  <text x="935" y="648" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#22c55e">Implements Interfaces</text>
+
+  <!-- Infrastructure -> UseCases (provides query service) -->
+  <path d="M 600 545 L 560 545" stroke="#dbeafe" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 600 545 L 560 545" class="flow-line-blue" stroke="#3b82f6" stroke-width="3" fill="none" marker-end="url(#arrowBlue)" stroke-linecap="round"/>
+  <text x="580" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#3b82f6">IListContributorsQueryService</text>
+
+  <!-- Web -> Infrastructure (DI registration) -->
+  <path d="M 680 420 L 780 420 L 780 470" stroke="#bfdbfe" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 680 420 L 780 420 L 780 470" class="flow-line-blue" stroke="#3b82f6" stroke-width="3" fill="none" marker-end="url(#arrowBlue)" stroke-linecap="round"/>
+  <text x="730" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#3b82f6">DI Wiring</text>
+
+  <!-- Aspire -> ServiceDefaults -->
+  <path d="M 1090 210 L 1090 248 L 1050 280" stroke="#bbf7d0" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 1090 210 L 1090 248 L 1050 280" class="flow-line-teal" stroke="#42b883" stroke-width="3" fill="none" marker-end="url(#arrowTeal)" stroke-linecap="round"/>
+  <text x="1115" y="248" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#42b883">Orchestrates</text>
+
+  <!-- ServiceDefaults -> Web -->
+  <path d="M 820 350 L 780 350" stroke="#e9d5ff" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 820 350 L 780 350" class="flow-line-purple" stroke="#a855f7" stroke-width="3" fill="none" marker-end="url(#arrowPurple)" stroke-linecap="round"/>
+  <text x="800" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#a855f7">AddServiceDefaults()</text>
+
+  <!-- Aspire -> Infrastructure (SQL Server container) -->
+  <path d="M 1090 210 L 1090 350 L 1090 470" stroke="#dbeafe" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 1090 210 L 1090 350 L 1090 470" class="flow-line-blue" stroke="#3b82f6" stroke-width="3" fill="none" marker-end="url(#arrowBlue)" stroke-linecap="round"/>
+  <text x="1155" y="355" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#3b82f6">SQL Server Container</text>
+
+  <!-- ============================================ -->
+  <!-- DEPENDENCY RULE ARROW (big right side)       -->
+  <!-- ============================================ -->
+  <g transform="translate(1240, 280)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#94a3b8" transform="rotate(90, 0, 0)">Dependency Rule: outer → inner only</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- DATA FLOW DESCRIPTION                        -->
+  <!-- ============================================ -->
+  <g transform="translate(50, 830)">
+    <rect x="0" y="0" width="700" height="105" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="350" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Request Flow / 请求流程</text>
+
+    <g transform="translate(20, 38)">
+      <circle cx="8" cy="8" r="6" fill="#0ea5e9"/>
+      <text x="22" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">1. Client sends HTTP request to FastEndpoint</text>
+    </g>
+    <g transform="translate(20, 58)">
+      <circle cx="8" cy="8" r="6" fill="#a855f7"/>
+      <text x="22" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">2. Endpoint validates request (FluentValidation) → dispatches Command/Query via Mediator</text>
+    </g>
+    <g transform="translate(20, 78)">
+      <circle cx="8" cy="8" r="6" fill="#f97316"/>
+      <text x="22" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">3. Handler executes use case using Repository (CQRS) → returns Result&lt;T&gt;</text>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LEGEND                                       -->
+  <!-- ============================================ -->
+  <g transform="translate(780, 830)">
+    <rect x="0" y="0" width="450" height="105" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="225" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#64748b">LEGEND / 图例</text>
+
+    <rect x="20" y="38" width="24" height="14" rx="3" fill="#0ea5e9"/>
+    <text x="50" y="49" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Client / External</text>
+
+    <rect x="150" y="38" width="24" height="14" rx="3" fill="#a855f7"/>
+    <text x="180" y="49" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Web / API</text>
+
+    <rect x="260" y="38" width="24" height="14" rx="3" fill="#f97316"/>
+    <text x="290" y="49" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">UseCases</text>
+
+    <rect x="370" y="38" width="24" height="14" rx="3" fill="#3b82f6"/>
+    <text x="400" y="49" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Infra</text>
+
+    <rect x="20" y="62" width="24" height="14" rx="3" fill="#22c55e"/>
+    <text x="50" y="73" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Core / Domain</text>
+
+    <rect x="150" y="62" width="24" height="14" rx="3" fill="#42b883"/>
+    <text x="180" y="73" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Aspire / Defaults</text>
+
+    <g transform="translate(260, 62)">
+      <line x1="0" y1="7" x2="40" y2="7" stroke="#94a3b8" stroke-width="3" stroke-dasharray="8,4"/>
+      <path d="M40,2 L48,7 L40,12 z" fill="#94a3b8"/>
+      <text x="56" y="11" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Data Flow</text>
+    </g>
+
+    <text x="225" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Core has zero external dependencies — all arrows point inward</text>
+  </g>
+
+</svg>

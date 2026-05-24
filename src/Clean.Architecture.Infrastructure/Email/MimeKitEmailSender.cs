@@ -14,7 +14,7 @@ public class MimeKitEmailSender(ILogger<MimeKitEmailSender> logger,
 
     using var client = new MailKit.Net.Smtp.SmtpClient(); 
     await client.ConnectAsync(_mailserverConfiguration.Hostname, 
-      _mailserverConfiguration.Port, false);
+      _mailserverConfiguration.Port, _mailserverConfiguration.UseSsl);
     var message = new MimeMessage();
     message.From.Add(new MailboxAddress(from, from));
     message.To.Add(new MailboxAddress(to, to));

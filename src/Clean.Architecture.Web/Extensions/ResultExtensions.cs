@@ -85,14 +85,4 @@ public static class ResultExtensions
         statusCode: StatusCodes.Status400BadRequest)
     };
   }
-
-  /// <summary>
-  /// Maps Result to TypedResults for endpoints that return Ok only (like List endpoints)
-  /// </summary>
-  public static Ok<TResponse> ToOkOnlyResult<TValue, TResponse>(
-    this Result<TValue> result,
-    Func<TValue, TResponse> mapResponse)
-  {
-    return TypedResults.Ok(mapResponse(result.Value));
-  }
 }

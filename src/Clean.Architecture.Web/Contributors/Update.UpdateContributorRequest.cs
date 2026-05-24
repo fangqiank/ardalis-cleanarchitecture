@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Clean.Architecture.Web.Contributors;
+﻿namespace Clean.Architecture.Web.Contributors;
 
 public class UpdateContributorRequest
 {
@@ -9,8 +7,6 @@ public class UpdateContributorRequest
 
   public int ContributorId { get; set; }
 
-  [Required]
   public int Id { get; set; }
-  [Required]
   public string? Name { get; set; }
 }

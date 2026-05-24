@@ -13,6 +13,7 @@ public class GetById(IMediator mediator)
                      ProblemHttpResult>,
              GetContributorByIdMapper>
 {
+  private readonly IMediator _mediator = mediator;
   public override void Configure()
   {
     Get(GetContributorByIdRequest.Route);
@@ -44,7 +45,7 @@ public class GetById(IMediator mediator)
   public override async Task<Results<Ok<ContributorRecord>, NotFound, ProblemHttpResult>>
     ExecuteAsync(GetContributorByIdRequest request, CancellationToken ct)
   {
-    var result = await mediator.Send(new GetContributorQuery(ContributorId.From(request.ContributorId)), ct);
+    var result = await _mediator.Send(new GetContributorQuery(ContributorId.From(request.ContributorId)), ct);
 
     return result.ToGetByIdResult(Map.FromEntity);
   }

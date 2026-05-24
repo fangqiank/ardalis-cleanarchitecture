@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Clean.Architecture.Core.ContributorAggregate;
+﻿using Clean.Architecture.Core.ContributorAggregate;
 using Clean.Architecture.UseCases.Contributors.Create;
 using Clean.Architecture.Web.Extensions;
 using FluentValidation;
@@ -63,7 +62,6 @@ public class CreateContributorRequest
 {
   public const string Route = "/Contributors";
 
-  [Required]
   public string Name { get; set; } = String.Empty;
   public string? PhoneNumber { get; set; } = null;
 }
@@ -77,6 +75,13 @@ public class CreateContributorValidator : Validator<CreateContributorRequest>
       .WithMessage("Name is required.")
       .MinimumLength(2)
       .MaximumLength(ContributorName.MaxLength);
+
+    When(x => !string.IsNullOrEmpty(x.PhoneNumber), () =>
+    {
+      RuleFor(x => x.PhoneNumber)
+        .Matches(@"^\+?\d[\d\s\-]{6,}$")
+        .WithMessage("PhoneNumber must be a valid phone number format.");
+    });
   }
 }
 

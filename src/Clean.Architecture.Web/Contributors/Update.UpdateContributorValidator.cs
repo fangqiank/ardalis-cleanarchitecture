@@ -1,12 +1,9 @@
-﻿using Clean.Architecture.Infrastructure.Data.Config;
+﻿using Clean.Architecture.Core.ContributorAggregate;
 using FastEndpoints;
 using FluentValidation;
 
 namespace Clean.Architecture.Web.Contributors;
 
-/// <summary>
-/// See: https://fast-endpoints.com/docs/validation
-/// </summary>
 public class UpdateContributorValidator : Validator<UpdateContributorRequest>
 {
   public UpdateContributorValidator()
@@ -15,7 +12,7 @@ public class UpdateContributorValidator : Validator<UpdateContributorRequest>
       .NotEmpty()
       .WithMessage("Name is required.")
       .MinimumLength(2)
-      .MaximumLength(DataSchemaConstants.DEFAULT_NAME_LENGTH);
+      .MaximumLength(ContributorName.MaxLength);
     RuleFor(x => x.ContributorId)
       .Must((args, contributorId) => args.Id == contributorId)
       .WithMessage("Route and body Ids must match; cannot update Id of an existing resource.");
